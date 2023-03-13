@@ -7,7 +7,7 @@ languages = {
         "speakers": {"male": "", "female": ""},
     },
     "en": {
-        "model_name": "tts_models/en/ek1/tacotron2",
+        "model_name": "tts_models/en/ljspeech/speedy-speech",
         "speakers": {"male": "", "female": ""},
     },
     "fr": {

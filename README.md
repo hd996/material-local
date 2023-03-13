@@ -21,14 +21,14 @@
 
 ## 🚀 启动
 ### 安装环境
-- [ffmpeg](https://ffmpeg.org/download.html)
-- [python3](https://www.python.org/downloads)
+- [FFmpeg](https://ffmpeg.org/download.html)
+- [Python](https://www.python.org/downloads)
 
 ### 配置
 - 复制`config.py.example`为`config.py`，将`ffmpeg_path`改为自己的路径，如果不上传s3，可以不用填写s3的相关配置
 
 ### 模型选择
-目前支持多语言的tts模型比较少，大部分模型都只针对单一语言训练，我使用的是`coqui-ai/TTS`，好处是切换语言模型比较方便，之前也尝试过[Huggingface](https://huggingface.co/)上的模型，效果也是一样的
+目前支持多语言的TTS模型比较少，大部分模型都只针对单一语言训练，我使用的是`coqui-ai/TTS`，好处是切换语言模型比较方便，之前也尝试过[Huggingface](https://huggingface.co/)上的模型，效果也是一样的
 
 ### 使用
 ```zsh
