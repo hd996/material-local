@@ -1,5 +1,5 @@
 import argparse
-from lib import coqui_tts, ffmpeg
+from lib import tts, ffmpeg
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -10,7 +10,7 @@ if __name__ == "__main__":
     parser.add_argument("--video-path", "-vp", help="视频地址", required=True)
     args = parser.parse_args()
 
-    coqui_tts.gen(getattr(args, "country_code"), args.text)
+    tts.gen(getattr(args, "country_code"), args.text)
     video_url = ffmpeg.combine(
         getattr(args, "video_path"),
     )

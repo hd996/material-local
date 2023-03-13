@@ -7,3 +7,5 @@ venv/
 config.py
 
 *.wav
+*.mp4
+!demo.mp4

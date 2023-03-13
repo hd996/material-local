@@ -21,13 +21,14 @@
 
 ## 🚀 启动
 在启动之前需要安装必须的环境
-- ffmpeg: 用于视频处理
-- python3
+- [ffmpeg](https://ffmpeg.org/download.html)
+- [python3](https://www.python.org/downloads)
 
 目前支持多语言的tts模型比较少，大部分模型都只针对单一语言训练，我使用的是`coqui-ai/TTS`，好处是切换语言模型比较方便，之前也尝试过[Huggingface](https://huggingface.co/)上的模型，效果也是一样的
 
 ```zsh
-python -h # 获取帮助
+pip install TTS # 安装coqui-ai/TTS
+python main.py -h # 获取帮助
 python main.py -cc {contry_code} -t {text} -vp {video_path} # 原视频 + 文案 => 合成视频
 
 # 举个🌰
@@ -39,7 +40,7 @@ python main.py -cc fr -t "C’est un grand jeu, j’aime jouer beaucoup" -vp dem
 # copy config.py.example => config.py，代码在lib/s3.py
 ```
 
-## Q & A
+## 👩‍💻 Q & A
 - Q: 当前存在问题？
 - A: 「前言」提到的「语速/男女声/情感/匹配度」等问题，需要自己去尝试合适的模型，另外对于长文本，支持地都很差
 
@@ -48,5 +49,5 @@ python main.py -cc fr -t "C’est un grand jeu, j’aime jouer beaucoup" -vp dem
 
 ## 🔗 链接
 - [coqui-ai/TTS](https://github.com/coqui-ai/TTS)
-- [FFmpeg](https://ffmpeg.org/)
+- [FFmpeg](https://ffmpeg.org)
 - [tts-tacotron2-ljspeech](https://huggingface.co/speechbrain/tts-tacotron2-ljspeech)
