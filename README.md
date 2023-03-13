@@ -20,24 +20,26 @@
 
 
 ## 🚀 启动
-在启动之前需要安装必须的环境
+### 安装环境
 - [ffmpeg](https://ffmpeg.org/download.html)
 - [python3](https://www.python.org/downloads)
 
+### 配置
+- 复制`config.py.example`为`config.py`，将`ffmpeg_path`改为自己的路径，如果不上传s3，可以不用填写s3的相关配置
+
+### 模型选择
 目前支持多语言的tts模型比较少，大部分模型都只针对单一语言训练，我使用的是`coqui-ai/TTS`，好处是切换语言模型比较方便，之前也尝试过[Huggingface](https://huggingface.co/)上的模型，效果也是一样的
 
+### 使用
 ```zsh
-pip install TTS # 安装coqui-ai/TTS
-python main.py -h # 获取帮助
-python main.py -cc {contry_code} -t {text} -vp {video_path} # 原视频 + 文案 => 合成视频
+$ pip install TTS # 安装coqui-ai/TTS
+$ python main.py -h # 获取帮助
+$ python main.py -cc {contry_code} -t {text} -vp {video_path} # 原视频 + 文案 => 合成视频
 
 # 举个🌰
-python main.py -cc zh -t "这个是一个很棒的游戏，我非常喜欢玩" -vp demo.mp4 # 中文
-python main.py -cc en -t "This is a great game, I like playing very much" -vp demo.mp4 # 英文
-python main.py -cc fr -t "C’est un grand jeu, j’aime jouer beaucoup" -vp demo.mp4 # 法语
-
-# 生成视频上传s3
-# copy config.py.example => config.py，代码在lib/s3.py
+$ python main.py -cc zh -t "这个是一个很棒的游戏，我非常喜欢玩" -vp demo.mp4 # 中文
+$ python main.py -cc en -t "This is a great game, I like playing very much" -vp demo.mp4 # 英文
+$ python main.py -cc fr -t "C’est un grand jeu, j’aime jouer beaucoup" -vp demo.mp4 # 法语
 ```
 
 ## 👩‍💻 Q & A
